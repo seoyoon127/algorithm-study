@@ -1,0 +1,12 @@
+def hanoi(i, a, b, c):
+    if i==1 :
+        print(a,c)
+    else:
+        hanoi(i-1, a, c, b)
+        print(a,c)
+        hanoi(i-1, b, a, c)
+
+if __name__ == "__main__":
+    n = int(input())
+    print(2**n - 1)
+    hanoi(n, 1, 2, 3)
